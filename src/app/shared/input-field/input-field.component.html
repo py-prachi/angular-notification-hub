@@ -1,0 +1,12 @@
+<div class="form-group">
+    <label [for]="id">{{ label }} <span *ngIf="required">*</span></label>
+    <input
+    type="text"
+    [id]="id"
+    [placeholder]="placeholder"
+    [(ngModel)]="value"
+    (ngModelChange)="onInputChange($event)"
+    class="form-control"
+    [attr.required]="required ? true : null" 
+    /> 
+</div>

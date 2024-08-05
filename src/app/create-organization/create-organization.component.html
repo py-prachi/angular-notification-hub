@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Sign up to Naas</h2>
+  <p>Enter basic details below to get started with NAAS.</p>
+  <form (ngSubmit)="handleSubmit()">
+    <app-input-field
+      label="First Name"
+      id="firstName"
+      placeholder="Enter your first name..."
+      [(ngModel)]="firstName"
+      name="firstName"
+      [required]="true"
+      (valueChange)="firstName = $event"
+    ></app-input-field>
+
+    <app-input-field
+      label="Last Name"
+      id="lastName"
+      placeholder="Enter your last name..."
+      [(ngModel)]="lastName"
+      name="lastName"
+      (valueChange)="lastName = $event"
+    ></app-input-field>
+
+    <app-input-field
+      label="Company Name"
+      id="companyName"
+      placeholder="Enter your company name..."
+      [(ngModel)]="companyName"
+      name="companyName"
+      [required]="true"
+      (valueChange)="companyName = $event"
+    ></app-input-field>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
