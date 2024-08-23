@@ -1,0 +1,34 @@
+
+<div class="container">
+    <div class="header">
+        <h2>Settings</h2>
+      </div>
+    <hr/>
+    <div class="form-container">
+        <div class="field">
+            <p class="label">Company Name</p>
+            <p class="value">{{ orgName }}</p>
+        </div>
+    </div>
+    <div class="field">
+        <p class="label">Org Key</p>
+        <div class="key-container">
+            <input
+            type="{{ isKeyVisible ? 'text' : 'password' }}"
+            [value]="orgKey"
+            class="key-input"
+            readonly
+            />
+            <button (click)="toggleKeyVisibility()" class="icon-button">
+                <mat-icon>{{isKeyVisible ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <button (click)="copyOrgKey()" class="icon-button">
+                <mat-icon>content_copy</mat-icon>
+            </button>
+            
+
+        </div>
+        
+      </div>
+
+</div>

@@ -1,0 +1,146 @@
+<nav class="fixed top-16 left-0 z-50 w-64 bg-background h-screen border-r">
+    <div class="flex h-16 items-center justify-center border-b">
+      <a class="text-lg font-bold" href="#">
+        {{ companyName }}
+      </a>
+    </div>
+    <div class="flex flex-col divide-y divide-gray-200"> <!-- Adjust the division style here -->
+      <a class="flex items-center gap-3 px-4 py-3 hover:bg-muted" href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+          <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+          <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+          <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+        </svg>
+        <span>Dashboard</span>
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 hover:bg-muted" href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+          <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+        </svg>
+        <span>Notifications</span>
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 hover:bg-muted" href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <span>Users</span>
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 hover:bg-muted cursor-pointer" routerLink="/integrations">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <path d="M12 22v-5"></path>
+          <path d="M9 8V2"></path>
+          <path d="M15 8V2"></path>
+          <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"></path>
+        </svg>
+        <span>Integrations</span>
+      </a>
+      
+      <a class="flex items-center gap-3 px-4 py-3 hover:bg-muted" href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <line x1="12" x2="12" y1="20" y2="10"></line>
+          <line x1="18" x2="18" y1="20" y2="4"></line>
+          <line x1="6" x2="6" y1="20" y2="16"></line>
+        </svg>
+        <span>Analytics</span>
+      </a>
+    </div>
+    <!-- Add a single hr before "My Teams" -->
+    <hr class="border-t border-gray-200 my-4" />
+    <div class="flex flex-col divide-y divide-gray-200 mt-auto"> <!-- Moves "My Teams" and "Settings" to the bottom -->
+      <a class="flex items-center gap-3 px-4 py-3 hover:bg-muted" href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <!-- SVG content here -->
+        </svg>
+        <span>My Teams</span>
+      </a>
+      <a class="flex items-center gap-3 px-4 py-3 hover:bg-muted" routerLink="/org-setting">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-5 w-5"
+        >
+          <!-- SVG content here -->
+        </svg>
+        <span>Settings</span>
+      </a>
+    </div>
+  </nav>
+  

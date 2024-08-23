@@ -1,0 +1,36 @@
+<form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Host (TLS-Enabled)</mat-label>
+      <input matInput formControlName="hostName" placeholder="Enter your host detail" />
+      <!-- <mat-error *ngIf="emailForm.get('hostName')?.hasError('required')">
+        Host is required
+      </mat-error> -->
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="userName" placeholder="Enter your username" />
+      <!-- <mat-error *ngIf="emailForm.get('userName')?.hasError('required')">
+        Username is required
+      </mat-error> -->
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" placeholder="Enter your password" type="password" />
+      <!-- <mat-error *ngIf="emailForm.get('password')?.hasError('required')">
+        Password is required
+      </mat-error> -->
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Port</mat-label>
+      <input matInput formControlName="port" placeholder="Enter port number" />
+      <!-- <mat-error *ngIf="emailForm.get('port')?.hasError('required')">
+        Port is required
+      </mat-error> -->
+    </mat-form-field>
+  
+    <button type="submit" [disabled]="emailForm.invalid" mat-raised-button color="primary"  >Submit</button>
+  </form>
+  

@@ -1,0 +1,17 @@
+<div class="integration-box-container">
+  <a *ngIf="routerLink" [routerLink]="routerLink" class="integration-box-content">
+    <ng-container *ngIf="icon">
+      <img [src]="icon" [alt]="name + ' icon'" class="integration-box-img" />
+    </ng-container>
+    <span class="body-medium">{{ name }}</span>
+  </a>
+  
+  <div *ngIf="!routerLink" class="integration-box-content">
+    <ng-container *ngIf="icon">
+      <img [src]="icon" [alt]="name + ' icon'" class="integration-box-img" />
+    </ng-container>
+    <span class="body-medium">{{ name }}</span>
+  </div>
+
+  <app-generic-button (click)="onActivate()" text="Activate"></app-generic-button>
+</div>

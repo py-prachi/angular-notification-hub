@@ -1,0 +1,41 @@
+<div class="container">
+    <div style="padding: 24px">
+      <!-- Test Link
+    <a [routerLink]="['/integrations/email']">Test Email Route</a> -->
+
+      <h6>Integrations</h6>
+      <p class="body-small" style="margin-top: 8px;">
+        To use any channel services for your notifications, please install integrations from the available service providers list.
+      </p>
+      <hr style="margin-bottom: 24px; margin-top: 24px" />
+      
+      <div *ngIf="activeIntegrations.length > 0">
+        <p class="body-medium" style="margin-bottom: 24px;">Active integrations</p>
+        <div class="integration-box-container">
+          <app-integration-box></app-integration-box>
+            <!-- *ngFor="let integration of activeIntegrations"
+            [name]="integration.name"
+            [icon]="integration.icon"
+            [isActivated]="true"
+            (onActivate)="handleActivate(integration.name)"> -->
+          <!-- </app-integration-box> -->
+        </div>
+      </div>
+      
+      <p class="body-medium" style="margin-bottom: 24px;">Available integrations</p>
+    
+      <div class="integration-box-container">
+        <app-integration-box
+          *ngFor="let integration of availableIntegrations"
+          [name]="integration.name"
+          [icon]="integration.icon"
+          [routerLink]="getRouterLink(integration.name)"
+          (activate)="handleActivate(integration.name)"
+          >
+        </app-integration-box>
+      </div>
+    </div>
+  </div>
+  
+
+

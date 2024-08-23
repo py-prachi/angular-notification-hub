@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule,CommonModule],
   templateUrl: './input-field.component.html',
-  styleUrl: './input-field.component.css'
+  styleUrls: ['./input-field.component.css']
 })
 export class InputFieldComponent {
 @Input() label: string  = '';

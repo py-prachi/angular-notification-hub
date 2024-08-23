@@ -1,1 +1,7 @@
-<app-create-organization></app-create-organization>
+<ng-container *ngIf="!isCreateOrganisationPage">
+    <app-header></app-header>
+    <app-side-navigation></app-side-navigation>
+</ng-container>
+<div class="flex flex-col ml-64 mt-16 p-4">
+  <router-outlet></router-outlet>
+</div>

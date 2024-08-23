@@ -1,16 +1,32 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { OrgSettingComponent } from './org-setting/org-setting.component';
 import { CreateOrganizationComponent } from './create-organization/create-organization.component';
-import { InputFieldComponent } from './shared/input-field/input-field.component';
+import { HeaderComponent } from './header/header.component';
+import { SideNavigationComponent } from './side-navigation/side-navigation.component';
+import { IntegrationsComponent } from './integrations/integrations.component';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CreateOrganizationComponent,InputFieldComponent],
+  imports: [CommonModule,RouterOutlet, CreateOrganizationComponent, OrgSettingComponent, HeaderComponent, SideNavigationComponent, IntegrationsComponent, ReactiveFormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'angular-notification-hub';
+  isCreateOrganisationPage: boolean = false;
+
+  constructor(private router: Router) {}
+  ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isCreateOrganisationPage = event.urlAfterRedirects === '/create-organisation';
+      }
+    });
+  }
+
 }
